@@ -39,7 +39,7 @@
       <Suspense>
         <CityList />
         <template #fallback>
-          <p>Loading....</p>
+          <BaseCardSkeleton />
         </template>
       </Suspense>
     </div>
@@ -51,6 +51,7 @@ import { ref } from 'vue';
 import axios from "axios"
 import { useRouter } from 'vue-router';
 import CityList from '../components/CityList/CityList.vue';
+import BaseCardSkeleton from '../components/AnimatedPlaceholder/BaseCardSkeleton.vue';
 
 const router = useRouter();
 

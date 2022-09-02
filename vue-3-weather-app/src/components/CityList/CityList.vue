@@ -30,6 +30,9 @@ const getCities = async () => {
 
         const weatherData = await Promise.all(request);
 
+        //filcker delay
+        await new Promise((res) => setTimeout(res, 1000));
+
         //the weather data with the for each is an array which will contain the data for the request
         //in the foreach is to match up the data from the API. to whats saved in our saved cities
         weatherData.forEach((value, index) => {
